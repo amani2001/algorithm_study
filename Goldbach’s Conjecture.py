@@ -31,7 +31,8 @@ def get_list(n):
     '''
     global n_list
     n_list = [0] * (n+1)
-    for i in range(2,n+1):
+    n_list[2] = 1
+    for i in range(3,n+1,2):
         if isprime(i) == 1:
             n_list[i] = 1
     # print(n_list)
