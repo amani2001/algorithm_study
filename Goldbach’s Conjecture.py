@@ -48,7 +48,13 @@ def method_1(n):
             print("error")
 
 def method_2(n):
+    '''
+    直接读取列表中对应的数据是否为素数
+    :param n:
+    :return:
+    '''
     global n_list
+    # 初始化列表
     get_list(n)
     for i in range(4, n+1, 2):
         for j in range(2, i):
@@ -59,6 +65,23 @@ def method_2(n):
         if i == j:
             print("error")
 
+
+def method_3(n):
+    # 构造n以内的所有素数列表
+    prime_list = [2]
+    for i in range(3,n+1,2):
+        if isprime(i):
+            prime_list.append(i)
+    for i in range(4, n+1, 2):
+        for j in range(2, i):
+            if j in prime_list:
+                if i - j in prime_list:
+                    print("{}={}+{}".format(i, j, i - j))
+                    break;
+        if i == j:
+            print("error")
+
 if __name__ == '__main__':
     # method_1(2000)
-    method_2(2000)
+    # method_2(2000)
+    method_3(2000)
