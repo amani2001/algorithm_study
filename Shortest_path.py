@@ -5,8 +5,7 @@
 import numpy as np
 from queue import LifoQueue  # 导入栈，后进先出队列
 
-INF = int(np.e**20)
-
+INF = 0x3f3f3f3f
 
 class Dijkstra:
     def __init__(self,n):
