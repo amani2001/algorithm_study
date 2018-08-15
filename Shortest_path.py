@@ -47,7 +47,7 @@ class Dijkstra:
                     t = j
                     temp = self.__dist[j]
             if t == p:
-                return self.__dist, self.__pre_node
+                return
             self.__flag[t] = True
             for j in range(self.n):
                 if self.__flag[j] == False and self.matrix[t,j] < INF:
